@@ -20,6 +20,11 @@ app.use(expressLayouts)
 app.set("layout", "./layouts/layout") // not at views root
 
 
+//make the year available
+app.use((req, res, next) => {
+  res.locals.year = new Date().getFullYear()
+  next()
+})
 
 /* ***********************
  * Routes
