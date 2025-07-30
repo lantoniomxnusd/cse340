@@ -56,6 +56,34 @@ Util.buildClassificationGrid = async function(data){
   }
   return grid
 }
+/* **************************************
+* Build the Vehicle Detailss view HTML
+* ************************************ */
+Util.buildVehicleDetailsGrid = async function (vehicle) {
+  let details
+
+  if (vehicle) {
+    details = '<div class="vehicle-details">'
+
+    details += '<img src="' + vehicle.inv_image +'" alt = "Image of '
+    + vehicle.inv_make + ' ' + vehicle.inv_model + ' on CSE Motors" />'
+
+    details += '<div class="vehicle-info">'
+    details += '<h2>' + vehicle.inv_year + ' ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2>'
+    details += '<span class="price> $'
+      + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>'
+    details += '<p>Description:' + vehicle.inv_description +  '</p>'
+    details += '<p>Color:' + vehicle.inv_color + '</p>'
+    details += '<p>Miles:' 
+      + new Intl.NumberFormat('en-US').format(vehicle.inv_miles) + '</p>'
+    details += '</div>'
+
+    details += '</div>'
+  }else {
+    detailas = '<p class="notice"> Sorry, no details available at this time. Please contact the dealership near you.</p>'
+  }
+  return details
+}
 
 /* ****************************************
  * Middleware For Handling Errors
