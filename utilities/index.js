@@ -59,30 +59,30 @@ Util.buildClassificationGrid = async function(data){
 /* **************************************
 * Build the Vehicle Detailss view HTML
 * ************************************ */
-Util.buildVehicleDetailsGrid = async function (vehicle) {
-  let details
+Util.buildVehicleDetailsView = async function (vehicle) {
+  let vehicleDetails
 
   if (vehicle) {
-    details = '<div class="vehicle-details">'
+    vehicleDetails = '<div class="vehicle-details">'
 
-    details += '<img src="' + vehicle.inv_image +'" alt = "Image of '
+    vehicleDetails += '<img src="' + vehicle.inv_image +'" alt = "Image of '
     + vehicle.inv_make + ' ' + vehicle.inv_model + ' on CSE Motors" />'
 
-    details += '<div class="vehicle-info">'
-    details += '<h2>' + vehicle.inv_year + ' ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2>'
-    details += '<span class="price> $'
+    vehicleDetails += '<div class="vehicle-info">'
+    vehicleDetails += '<h2>' + vehicle.inv_year + ' ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2>'
+    vehicleDetails += '<span class="price"> $'
       + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>'
-    details += '<p>Description:' + vehicle.inv_description +  '</p>'
-    details += '<p>Color:' + vehicle.inv_color + '</p>'
-    details += '<p>Miles:' 
+    vehicleDetails += '<p>Description:' + vehicle.inv_description +  '</p>'
+    vehicleDetails += '<p>Color:' + vehicle.inv_color + '</p>'
+    vehicleDetails += '<p>Miles:' 
       + new Intl.NumberFormat('en-US').format(vehicle.inv_miles) + '</p>'
-    details += '</div>'
+    vehicleDetails += '</div>'
 
-    details += '</div>'
+    vehicleDetails += '</div>'
   }else {
-    detailas = '<p class="notice"> Sorry, no details available at this time. Please contact the dealership near you.</p>'
+     vehicleDetails = '<p class="notice"> Sorry, no details available at this time. Please contact the dealership near you.</p>'
   }
-  return details
+  return vehicleDetails
 }
 
 /* ****************************************
