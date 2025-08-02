@@ -31,6 +31,9 @@ app.use(static)
 // Index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
 
+//intentional error route
+app.get("/intentional-error", utilities.handleErrors(baseController.intentionalError))
+
 // Inventory routes
 app.use("/inv", inventoryRoute)
 

@@ -17,6 +17,12 @@
     --background-color: #eee;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: var(--font-paragraph);
     margin: 0 auto;
@@ -299,6 +305,18 @@ header {
 }
 
 
+/* ****************Error ********************** */
+.error {
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.error p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
 
 /* ************************Large*************************** */
 
@@ -311,12 +329,18 @@ header {
     }
 
     #wrapper {
+        display:flex;
+        flex-direction: column;
         max-width: 1100px;
         margin: 0 auto;
         background-color: white;
         min-height: 100vh;
         padding: 0 20px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    main {
+        flex-grow: 1;
     }
     .main-content {
         display: grid;
