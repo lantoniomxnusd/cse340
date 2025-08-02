@@ -72,14 +72,14 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 
 .navigation a {
     display: block;
-    padding: 1rem .8rem;
+    padding: .75rem .5rem;
     color: white;
     font-weight: 500;
     text-decoration: none;
