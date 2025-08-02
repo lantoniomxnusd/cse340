@@ -70,11 +70,11 @@ Util.buildVehicleDetailsView = async function (vehicle) {
 
     vehicleDetails += '<div class="vehicle-info">'
     vehicleDetails += '<h2>' + vehicle.inv_year + ' ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2>'
-    vehicleDetails += '<span class="price"> $'
-      + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>'
-    vehicleDetails += '<p>Description:' + vehicle.inv_description +  '</p>'
-    vehicleDetails += '<p>Color:' + vehicle.inv_color + '</p>'
-    vehicleDetails += '<p>Miles:' 
+    vehicleDetails += '<p><span class="label">Price:</span> $'
+      + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</p>'; 
+    vehicleDetails += '<p><span class="label"> Description: </span>' + ' ' + vehicle.inv_description +  '</p>'
+    vehicleDetails += '<p><span class="label">Color: </span>' + ' ' + vehicle.inv_color + '</p>'
+    vehicleDetails += '<p><span class="label">Miles: </span>' + ' ' 
       + new Intl.NumberFormat('en-US').format(vehicle.inv_miles) + '</p>'
     vehicleDetails += '</div>'
 
