@@ -21,6 +21,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+     overflow-x: hidden;
 }
 
 body {
@@ -65,14 +66,13 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-
 }
 
 .navigation ul {
-    list-style-type: none;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+
     
 }
 
@@ -85,6 +85,7 @@ header {
     text-decoration: none;
     font-family: var(--font-heading);
     transition: bakground-color 0.3s ease;
+
 
 }
 
@@ -341,6 +342,15 @@ header {
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     }
 
+    .navigation ul{
+        display: flex;
+        justify-content: center;
+        gap:2rem;
+    }
+
+    .navigation a {
+        font-size: 1.5rem;
+    }
     main {
         flex-grow: 1;
     }
