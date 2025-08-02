@@ -72,6 +72,8 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
