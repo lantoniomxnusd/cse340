@@ -3,7 +3,7 @@
 * Unit 4, deliver Login view activity
 * ********************************* */
 const utilities = require('../utilities')
-const accountModel = require("../models/account-model")
+const accountModel = require('../models/account-model')
 
 /* *********************************
 * Account contorller
